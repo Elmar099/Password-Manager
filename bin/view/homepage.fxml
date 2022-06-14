@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.HomeController">
+   <left>
+      <AnchorPane prefHeight="500.0" prefWidth="220.0" style="-fx-background-color: #282828;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="35.0" layoutY="134.0" mnemonicParsing="false" onMouseClicked="#add" prefHeight="31.0" prefWidth="150.0" style="-fx-background-color: #27AE60;" text="Add an account" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="35.0" layoutY="255.0" mnemonicParsing="false" onMouseClicked="#delete" prefHeight="31.0" prefWidth="150.0" style="-fx-background-color: #E74C3C;" text="Delete an account" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="35.0" layoutY="330.0" mnemonicParsing="false" onMouseClicked="#generate" prefHeight="31.0" prefWidth="150.0" style="-fx-background-color: #2E86C1;" text="Generate password" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label layoutX="37.0" layoutY="277.0" prefHeight="43.0" prefWidth="171.0" text="Select a row from table and" textFill="#bfbfbf">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="41.0" layoutY="290.0" prefHeight="43.0" prefWidth="171.0" text="press this button to delete." textFill="#bfbfbf">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Button layoutX="35.0" layoutY="194.0" mnemonicParsing="false" onMouseClicked="#modify" prefHeight="31.0" prefWidth="150.0" style="-fx-background-color: #d68910;" text="Modify an Account" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="21.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#login" style="-fx-background-color: #E74C3C;" text="Log Out" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="500.0" prefWidth="527.0" style="-fx-background-color: #3d3d3d;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="RIGHT" layoutX="31.0" layoutY="6.0" prefHeight="73.0" prefWidth="418.0" text="List of Accounts" textFill="WHITE">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <TableView fx:id="accountTableView" layoutX="19.0" layoutY="137.0" prefHeight="339.0" prefWidth="443.0" style="-fx-background-color: #D6EAF8;">
+              <columns>
+                <TableColumn fx:id="userColumn" prefWidth="91.0" style="-fx-background-color: #D6EAF8;" text="Username" />
+                <TableColumn fx:id="passColumn" prefWidth="98.0" style="-fx-background-color: #D6EAF8;" text="Password" />
+                  <TableColumn fx:id="emailColumn" prefWidth="143.0" style="-fx-background-color: #D6EAF8;" text="Email" />
+                  <TableColumn fx:id="webColumn" prefWidth="110.0" style="-fx-background-color: #D6EAF8;" text="Website" />
+              </columns>
+            </TableView>
+            <Label layoutX="25.0" layoutY="100.0" prefHeight="19.0" prefWidth="107.0" text="Search Accounts: " textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tf_searchbar" layoutX="132.0" layoutY="97.0" prefHeight="22.0" prefWidth="329.0" promptText="Enter keywords..." />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

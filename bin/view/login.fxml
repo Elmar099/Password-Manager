@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.LoginController">
+   <left>
+      <AnchorPane prefHeight="500.0" prefWidth="225.0" style="-fx-background-color: #282828;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="129.0" layoutY="106.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="16.0" style="-fx-background-color: #5DADE2; -fx-background-radius: 50;" textFill="#222121" />
+            <Button layoutX="105.0" layoutY="86.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="16.0" style="-fx-background-color: #F1C40F; -fx-background-radius: 50;" textFill="#222121" />
+            <Button layoutX="81.0" layoutY="105.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="16.0" style="-fx-background-color: #52BE80; -fx-background-radius: 50;" textFill="#222121" />
+            <Button layoutX="154.0" layoutY="152.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="16.0" style="-fx-background-color: #E74C3C; -fx-background-radius: 50;" textFill="#222121" />
+            <Button layoutX="33.0" layoutY="193.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="16.0" style="-fx-background-color: #5DADE2; -fx-background-radius: 50;" textFill="#222121" />
+            <Button layoutX="57.0" layoutY="151.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="16.0" style="-fx-background-color: #E74C3C; -fx-background-radius: 50;" textFill="#222121" />
+            <Button layoutX="57.0" layoutY="233.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="16.0" style="-fx-background-color: #E74C3C; -fx-background-radius: 50;" textFill="#222121" />
+            <Button layoutX="81.0" layoutY="221.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="16.0" style="-fx-background-color: #52BE80; -fx-background-radius: 50;" textFill="#222121" />
+            <Button layoutX="81.0" layoutY="267.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="16.0" style="-fx-background-color: #52BE80; -fx-background-radius: 50;" textFill="#222121" />
+            <Button layoutX="105.0" layoutY="176.0" mnemonicParsing="false" prefHeight="99.0" prefWidth="16.0" style="-fx-background-color: #F1C40F; -fx-background-radius: 50;" textFill="#222121" />
+            <Button layoutX="105.0" layoutY="283.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="16.0" style="-fx-background-color: #F1C40F; -fx-background-radius: 50;" textFill="#222121" />
+            <Button layoutX="129.0" layoutY="146.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="16.0" style="-fx-background-color: #5DADE2; -fx-background-radius: 50;" textFill="#222121" />
+            <Button layoutX="129.0" layoutY="204.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="16.0" style="-fx-background-color: #5DADE2; -fx-background-radius: 50;" textFill="#222121" />
+            <Button layoutX="129.0" layoutY="270.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="16.0" style="-fx-background-color: #5DADE2; -fx-background-radius: 50;" textFill="#222121" />
+            <Button layoutX="154.0" layoutY="197.0" mnemonicParsing="false" prefHeight="93.0" prefWidth="16.0" style="-fx-background-color: #E74C3C; -fx-background-radius: 50;" textFill="#222121" />
+            <Button layoutX="180.0" layoutY="193.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="16.0" style="-fx-background-color: #5DADE2; -fx-background-radius: 50;" textFill="#222121" />
+         </children></AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="500.0" prefWidth="476.0" style="-fx-background-color: #3d3d3d;" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="tf_username" layoutX="61.0" layoutY="133.0" prefHeight="32.0" prefWidth="343.0" promptText="Username..." />
+            <Label layoutX="200.0" layoutY="34.0" text="Login" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Button layoutX="165.0" layoutY="289.0" mnemonicParsing="false" onMouseClicked="#login" prefHeight="27.0" prefWidth="134.0" style="-fx-background-color: #CB4335; -fx-background-radius: 50;" text="Login" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+            <PasswordField fx:id="pf_password" layoutX="60.0" layoutY="186.0" prefHeight="32.0" prefWidth="343.0" promptText="Password..." />
+            <Text fill="#b2aeae" layoutX="30.0" layoutY="482.0" onMouseClicked="#signup" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account? Sign Up.">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#b2aeae" layoutX="74.0" layoutY="245.0" onMouseClicked="#reset" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot password? ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Label fx:id="errormsg" alignment="CENTER" layoutX="66.0" layoutY="110.0" prefHeight="17.0" prefWidth="334.0" textFill="RED" />
+            <Label alignment="CENTER" layoutX="62.0" layoutY="72.0" prefHeight="21.0" prefWidth="341.0" text="~~~WELCOME~~~" textFill="#5be181">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
