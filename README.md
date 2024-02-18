@@ -1,4 +1,4 @@
-# Password-Manager
+# Password Locker
 This is an application made using Java and SceneBuilder as well as SQL for database.  This app prompts for signup and then takes and stores user password for different websites and encrypts it using a custom encryption/decryption key library. This CRUD application was made following SDLC and MVC patterns. 
 
 ![login](https://user-images.githubusercontent.com/101601240/173470149-0de45003-8d85-456f-9ffd-85e35e1f5675.png)
